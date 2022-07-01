@@ -11,6 +11,6 @@ for i in {1..1000}; do
   value=${!var}
   if [ ${#value} -gt 0 ]; then
     echo "Creating bucket s3/${value}"
-    mc mb s3 "s3/${value}"
+    mc mb "s3/${value}"
   fi
 done
