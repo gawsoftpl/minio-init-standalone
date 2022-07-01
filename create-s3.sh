@@ -10,7 +10,7 @@ for i in {1..1000}; do
   var=INITIAL_BUCKET_NAME_$i
   value=${!var}
   if [ ${#value} -gt 0 ]; then
-    echo "Creating bucket ${value}"
+    echo "Creating bucket s3/${value}"
     mc mb s3 ${value}
   fi
 done
