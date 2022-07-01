@@ -12,6 +12,7 @@ MINIO_ROOT_PASSWORD=minio123
 ```
 access_key=abcfdsf
 secret_key=dfgdfgdf
+POLICY_NAME=readwrite
 ```
 
 # For create bucket

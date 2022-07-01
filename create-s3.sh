@@ -4,7 +4,9 @@ mc alias set s3 $ENDPOINT $MINIO_ROOT_USER $MINIO_ROOT_PASSWORD
 
 ## Create user
 mc admin user add s3 $access_key $secret_key
-mc alias set s3 $ENDPOINT $access_key $secret_key
+
+# Set Policy readwrite
+mc admin policy set s3 $POLICY_NAME user=$access_key
 
 # Create buckets
 for i in {1..1000}; do
