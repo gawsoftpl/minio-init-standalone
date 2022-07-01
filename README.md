@@ -11,7 +11,7 @@ MINIO_ROOT_PASSWORD=minio123
 # For create user
 ```
 access_key=abcfdsf
-access_key=dfgdfgdf
+secret_key=dfgdfgdf
 ```
 
 # For create bucket
