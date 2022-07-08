@@ -6,10 +6,10 @@ mc alias set s3 $ENDPOINT $MINIO_ROOT_USER $MINIO_ROOT_PASSWORD
 lifecycle_days () {
   # If set lifecycle
 
-  mc ilm import s3/$1 <<EOF
+mc ilm import s3/$1 <<EOF
   {
       "Rules": [
-    {
+          {
               "Expiration": {
                   "Days": $2
               },
@@ -39,7 +39,7 @@ for i in {1..1000}; do
     echo "Creating bucket ${value}"
     mc mb s3/${value}
 
-    if [ ${#BUCKET_LIFECYCLE_DAYS} ];
+    if [ ${#BUCKET_LIFECYCLE_DAYS} -gt 0 ];
     then
       lifecycle_days ${value} ${BUCKET_LIFECYCLE_DAYS} ${BUCKET_LIFECYCLE_PREFIX} 
     fi
