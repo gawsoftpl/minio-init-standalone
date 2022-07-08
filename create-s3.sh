@@ -24,7 +24,6 @@ lifecycle_days () {
 EOF
 }
 
-lifecycle_days abc 30
 
 ## Create user
 mc admin user add s3 $access_key $secret_key
