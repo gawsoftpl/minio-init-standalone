@@ -5,7 +5,7 @@ mc alias set s3 $ENDPOINT $MINIO_ROOT_USER $MINIO_ROOT_PASSWORD
 
 lifecycle_days () {
   # If set lifecycle
-  mc ilm import s3/$1 <<EOF
+  mc ilm import s3/${1} <<EOF
   {
       "Rules": [
     {
